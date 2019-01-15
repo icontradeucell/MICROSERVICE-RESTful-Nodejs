@@ -1,0 +1,32 @@
+{
+    "hosts" : {
+        "gateway" : {
+            "host": "gateway",
+            "port": 3000
+        },
+        "user" : {
+            "host": "user",
+            "port": 3000
+        },
+        "order" : {
+            "host" : "order",
+            "port" : 3000
+        },
+        "redisgw" : {
+            "host" : "redisgw",
+            "port" : 3000
+        },
+        "mysqlgw" : {
+            "host" : "mysqlgw",
+            "port" : 3000
+        }
+    },
+    "mysql": {
+        "username" : "root",
+        "password" : "root",
+        "database": "project",
+        "host": "mysql",
+        "dialect": "mysql",
+        "operatorsAliases": false
+    }
+}

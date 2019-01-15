@@ -1,0 +1,60 @@
+version: '3'
+services:
+    gateway:
+        image: tudtude/nodemon:2.0
+        volumes: 
+            - ./gateway:/usr/src/app
+        ports: 
+            - 80:80
+        command: nodemon -L index.js
+
+    user:
+        image: tudtude/nodemon:2.0
+        volumes: 
+            - ./user:/usr/src/app
+        command: nodemon -L index.js
+    
+    order:
+        image: tudtude/nodemon:2.0
+        volumes: 
+            - ./order:/usr/src/app
+        command: nodemon -L index.js
+
+    redisgw:
+        image: tudtude/nodemon:2.0
+        volumes:
+            - ./redisgw:/usr/src/app
+        command: nodemon -L index.js
+        depends_on:
+            - redis
+    
+    mysqlgw:
+        image: tudtude/nodemon:2.0
+        volumes:
+            - ./mysqlgw:/usr/src/app
+        command: nodemon -L index.js
+        depends_on:
+            - mysql
+    
+    redis:
+        image: redis
+        volumes:
+            - ./dev/redis:/data
+        ports:
+            - 6379:6379
+        restart: always
+
+    mysql: 
+        image: mysql
+        volumes:
+            - ./dev/mysql/mysql:/var/lib/mysql
+            - ./dev/mysql/mysql-config:/etc/mysql/conf.d
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: project
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
+        ports:
+            - 3306:3306
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
