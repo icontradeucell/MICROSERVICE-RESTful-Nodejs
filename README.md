@@ -41,6 +41,6 @@ This is example for RESTful API that construc base on microservice with Node.js,
 ## Test by postman
 
 1) getbyID
-> uri localhost/api/user/getbyID/1
+   > uri localhost/api/user/getbyID/:id
 
 
