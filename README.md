@@ -38,4 +38,9 @@ This is example for RESTful API that construc base on microservice with Node.js,
   
   5) In next time to run this project you can run **docker-compose up**, no need to run **docker-compose up mysql** again!
   
-      
+## Test by postman
+
+1) getbyID
+> uri localhost/api/user/getbyID/1
+
+
