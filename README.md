@@ -24,6 +24,15 @@ This is example for RESTful API that construc base on microservice with Node.js,
           
      Then you need to run 5 times, in eache folder
      
-  3) 
+  3) run command **docker-compose up mysql** in root part first for init mysql database avoid error, due with dev environtment it need to set up DB first
+  
+         docker-compose up mysql
+  
+  After Mysql was ready for accept TCP3306 then shut it down 
+  
+         by press contol c 
+         
+  4) run command **docker-compose up** in root part and everything should be ok ( redis server it quite fast then no need to do as Mysql)  
+  
   
       
