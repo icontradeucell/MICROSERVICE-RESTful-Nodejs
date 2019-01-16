@@ -19,6 +19,8 @@ example
                return result_from_mysql
           })
        }).catch( err => err )
+       
+This code still have bottleneck capacity as infra part, due with maximum flow of this redis as 100,000 req/s and it are statefull server then right now I can't extended it. I have plan to add more kafka but have no sponsor yet. 
 
 ## Prerequire for test
 
