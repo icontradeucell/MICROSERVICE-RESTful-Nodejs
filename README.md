@@ -6,6 +6,8 @@ This is example for RESTful API that construc base on microservice with Node.js,
 
 ![Alt](https://github.com/tudtude/MICROSERVICE-RESTful-Nodejs/blob/master/Untitled%20Diagram.png)
 
+This backend code are let devoper to enjoin his business logic
+
 ## Prerequire for test
 
   - Docker && docker-compose
