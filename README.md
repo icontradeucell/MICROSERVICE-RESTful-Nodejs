@@ -34,6 +34,8 @@ This is example for RESTful API that construc base on microservice with Node.js,
          
   4) run command **docker-compose up** in root part and everything should be ok ( redis server it quite fast then no need to do as Mysql)  
   
+         docker-compose up
+  
   5) In next time to run this project you can run **docker-compose up**, no need to run **docker-compose up mysql** again!
   
       
