@@ -41,6 +41,19 @@ This is example for RESTful API that construc base on microservice with Node.js,
 ## Test by postman
 
 1) getbyID
-   > uri localhost/api/user/getbyID/:id
+   > uri : localhost/api/user/getbyID/:id
+   > input: :id unmber
+   > output : object of user folowing **id** as we put
 
+2) add
+   > uri : localhost/api/user/add/
+   > input: user object objbect ( x-wwww-form-urlencoded )
+   > output: string "user already add" 
+   > example of user object
+       username : admin2
+       email: admin2@system.com
+       method: local
+       pwd: admin
+       rold: admin
+       
 
