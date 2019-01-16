@@ -47,6 +47,8 @@ This is example for RESTful API that construc base on microservice with Node.js,
    > input: :id unmber
    
    > output : object of user folowing **id** as we put
+   
+   > example : localhost/api/user/getbyID/1
 
 2) add
 
