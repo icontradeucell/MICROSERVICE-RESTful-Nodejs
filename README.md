@@ -1,5 +1,5 @@
 # MICROSERVICE-RESTful-Nodejs
-This is example for RESTful API that construc base on microservice with Node.js, this project are make form window then it may be problem with linux but it shold't have.
+This is example for RESTful API that construc base on microservice with Node.js, this project are make from window then it may be problem with linux but it shold't have. 
 
 
 ## Microserive diagram overview
