@@ -16,7 +16,7 @@ This is example for RESTful API that construc base on microservice with Node.js,
 
   1) get source code
   
-     git clone https://github.com/tudtude/MICROSERVICE-RESTful-Nodejs.git
+        git clone https://github.com/tudtude/MICROSERVICE-RESTful-Nodejs.git
   
   2) run command **npm install** for get all dependency code in each module folder( gateway, user, order, mysqlgw, redisgw )
   3) 
