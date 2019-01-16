@@ -6,7 +6,7 @@ This is example for RESTful API that construc base on microservice with Node.js,
 
 ![Alt](https://github.com/tudtude/MICROSERVICE-RESTful-Nodejs/blob/master/Untitled%20Diagram.png)
 
-This backend code are let devoper to enjoin his business logic in control part only, for model and infra part are automate update. In control part are work as promise base then it will clean code.
+This backend code will let devoper to enjoin his business logic in control part only, for model and infra part are automate update. In control part are work as promise base then it will clean code.
 
 example
 
