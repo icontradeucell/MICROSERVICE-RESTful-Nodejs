@@ -10,7 +10,7 @@ services:
         restart: always
 
     mysql: 
-        image: mysql
+        image: mysql:5.7
         volumes:
             - ./dev/mysql/mysql:/var/lib/mysql
             - ./dev/mysql/mysql-config:/etc/mysql/conf.d
