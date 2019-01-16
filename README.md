@@ -30,7 +30,7 @@ This is example for RESTful API that construc base on microservice with Node.js,
   
       After Mysql was ready for accept TCP3306 then shut it down 
   
-             by press contol c 
+         by press contol c 
          
   4) run command **docker-compose up** in root part and everything should be ok ( redis server it quite fast then no need to do as Mysql)  
   
