@@ -1,5 +1,29 @@
 version: '3'
 services:
+
+    redis:
+        image: redis
+        volumes:
+            - ./dev/redis:/data
+        ports:
+            - 6379:6379
+        restart: always
+
+    mysql: 
+        image: mysql
+        volumes:
+            - ./dev/mysql/mysql:/var/lib/mysql
+            - ./dev/mysql/mysql-config:/etc/mysql/conf.d
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: project
+            MYSQL_USER: test
+            MYSQL_PASSWORD: test
+        ports:
+            - 3306:3306
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+
     gateway:
         image: tudtude/nodemon:2.0
         volumes: 
@@ -36,25 +60,3 @@ services:
         depends_on:
             - mysql
     
-    redis:
-        image: redis
-        volumes:
-            - ./dev/redis:/data
-        ports:
-            - 6379:6379
-        restart: always
-
-    mysql: 
-        image: mysql
-        volumes:
-            - ./dev/mysql/mysql:/var/lib/mysql
-            - ./dev/mysql/mysql-config:/etc/mysql/conf.d
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: project
-            MYSQL_USER: test
-            MYSQL_PASSWORD: test
-        ports:
-            - 3306:3306
-        command: --default-authentication-plugin=mysql_native_password
-        restart: always
