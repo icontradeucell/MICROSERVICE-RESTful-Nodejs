@@ -6,7 +6,19 @@ This is example for RESTful API that construc base on microservice with Node.js,
 
 ![Alt](https://github.com/tudtude/MICROSERVICE-RESTful-Nodejs/blob/master/Untitled%20Diagram.png)
 
-This backend code are let devoper to enjoin his business logic
+This backend code are let devoper to enjoin his business logic in control part only, for model and infra part are automate update. In control part are work as promise base then it will clean code.
+
+example
+
+       methods( get_data_from_redis ).then( result_from_redis => {
+          if( result_from_redis ) return result_from_redis
+          methods( get_data_from_mysql).then( result_from_mysql => {
+            if( !result_from_mysql ) return "there is no data"
+            methods( save_data_redis ).then( result_from_redis => {
+               if( err ) return err
+               return result_from_mysql
+          })
+       }).catch( err => err )
 
 ## Prerequire for test
 
