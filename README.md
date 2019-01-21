@@ -50,7 +50,9 @@ example
   
          docker-compose up
   
-  5) In next time to run this project you can run **docker-compose up**, no need to run **docker-compose up mysql** again!
+  5) In next time to run this project you can run **docker-compose up**, no need to run **docker-compose up mysql** again. Anyway, if you still found error from mysqlgw then just wait for 2-3 min and then put command line in another window as
+  
+         docker-compose restart mysqlgw
   
 ## Test by postman
 
