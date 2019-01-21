@@ -20,8 +20,6 @@ example
           })
        }).catch( err => err )
        
-This code still have bottleneck capacity as infra part, due with maximum flow of this redis as 100,000 req/s and its statefull server then right now I can't extended it. I have plan to add more kafka or another technology that can help but have no sponsor yet, my last company was have financial problem since last two months.
-
 ## Prerequire for test
 
   - Docker && docker-compose
