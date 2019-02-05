@@ -10,14 +10,18 @@ This backend code will let devoper to enjoin his business logic in control part 
 
 example
 
-       methods( get_data_from_redis ).then( result_from_redis => {
-          if( result_from_redis ) return result_from_redis
-          methods( get_data_from_mysql).then( result_from_mysql => {
-            if( !result_from_mysql ) return "there is no data"
-            methods( save_data_redis ).then( result_from_redis => {
-               if( err ) return err
-               return result_from_mysql
-          })
+       methods( get_data_from_redis )
+              .then( result_from_redis => {
+                     if( result_from_redis ) return result_from_redis
+                     return methods( get_data_from_mysql)
+              .then( result_from_mysql => {
+                     if( !result_from_mysql ) return "there is no data"
+                     return methods( save_data_redis )
+              .then( result_from_redis => {
+                     if( err ) return err
+                     return result_from_mysql
+              })
+              .catch( err => err )
        }).catch( err => err )
        
 ## Prerequire for test
